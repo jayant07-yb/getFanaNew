@@ -11,6 +11,15 @@ export default function HomePage() {
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
+  const inputStyle = {
+    width: "100%",
+    padding: "10px",
+    marginBottom: "15px",
+    borderRadius: "6px",
+    border: "1px solid #ccc",
+    fontSize: "16px",
+  };
+  
   return (
     <div>
       {/* Banner Section */}
@@ -311,8 +320,6 @@ export default function HomePage() {
 
       {/* Fana Smart Pad */}
 
-
-
       <section style={{ width: "100%" }}>
   {/* Wrapper */}
   <div
@@ -400,6 +407,74 @@ export default function HomePage() {
   </style>
 </section>
 
+
+      {/* Free Trial Form Section */}
+      <section
+        id="free-trial-form"
+        style={{
+          padding: "60px 20px",
+          backgroundColor: "#f4f4f4",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+          minHeight: "100vh", // makes it vertically centered on screen
+        }}
+      >
+        <form
+          style={{
+            backgroundColor: "white",
+            padding: "30px 40px",
+            borderRadius: "12px",
+            boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+            maxWidth: "600px",
+            width: "100%",
+          }}
+        >
+          <h2 style={{ marginBottom: 20, fontSize: 28, textAlign: "center" }}>🚀 Get Your Free Trial</h2>
+
+          <label>🍽️ Restaurant Name</label>
+          <input type="text" placeholder="Enter restaurant name" style={inputStyle} />
+
+          <label>👤 Contact Person</label>
+          <input type="text" placeholder="Your name" style={inputStyle} />
+
+          <label>📧 Email</label>
+          <input type="email" placeholder="you@example.com" style={inputStyle} />
+
+          <label>📞 Phone Number</label>
+          <input type="tel" placeholder="1234567890" style={inputStyle} />
+
+          <label>📍 Restaurant Location</label>
+          <input type="text" placeholder="City / Address" style={inputStyle} />
+
+          <label style={{ marginTop: 20, fontWeight: "bold" }}>
+            ✅ What would you like to try?
+          </label>
+
+          <div style={{ display: "flex", flexDirection: "column", marginBottom: 20 }}>
+            <label><input type="checkbox" style={{ marginRight: 8 }} /> Robot Waiter</label>
+            <label><input type="checkbox" style={{ marginRight: 8 }} /> AI Menu</label>
+            <label><input type="checkbox" style={{ marginRight: 8 }} /> FanaCall</label>
+          </div>
+
+          <button
+            type="submit"
+            style={{
+              padding: "12px 24px",
+              fontSize: 16,
+              backgroundColor: "#211c36",
+              color: "white",
+              border: "none",
+              borderRadius: "8px",
+              cursor: "pointer",
+              width: "100%",
+            }}
+          >
+            Submit
+          </button>
+        </form>
+      </section>
 
 
       {/* Contact Section */}
