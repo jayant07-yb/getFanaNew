@@ -1,7 +1,16 @@
 import React from "react";
 import "./style.css";
+import { useEffect, useState } from "react";
 
 export default function HomePage() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
   return (
     <div>
       {/* Banner Section */}
@@ -209,6 +218,96 @@ export default function HomePage() {
 
       </section>
 
+      {/* Fana AI menu section */}
+
+      <section
+      style={{
+        display: "flex",
+        flexDirection: isMobile ? "column" : "row",
+        justifyContent: "center",
+        alignItems: isMobile ? "center" : "flex-start",
+        padding: "50px 5%",
+        backgroundImage: "url('/images/banner-image-7.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        color: "black",
+        gap: "40px",
+        paddingTop: "50px",
+      }}
+    >
+      {/* Left Info Block */}
+      <div
+        style={{
+          flex: "1 1 400px",
+          position: isMobile ? "static" : "sticky",
+          top: isMobile ? "auto" : "20vh",
+          alignSelf: isMobile ? "center" : "flex-start",
+          maxWidth: "600px",
+          width: "100%",
+          padding: "20px",
+          backgroundColor: "rgba(255, 255, 255, 0.85)",
+          borderRadius: "12px",
+          textAlign: "left",
+        }}
+      >
+        <h2 className="section-title">AI Enabled Menu</h2>
+        <p className="section-title" style={{ fontSize: 20, color: "#888888" }}>
+          Smart end-to-end menu
+        </p>
+        <div>
+          <h4><strong>What do we provide:</strong></h4>
+          <h5>Dynamic menu where customers can check and order food.</h5>
+          <h5>Pay bills directly from the menu.</h5>
+          <h5>Ask anything about the food.</h5>
+          <h5>Get top recommendations based on taste preferences.</h5>
+        </div>
+        <button
+          onClick={() => {
+            const formSection = document.getElementById("free-trial-form");
+            if (formSection) formSection.scrollIntoView({ behavior: "smooth" });
+          }}
+          style={{
+            marginTop: 20,
+            padding: "12px 24px",
+            fontSize: 16,
+            fontWeight: "bold",
+            backgroundColor: "#211c36",
+            color: "white",
+            border: "none",
+            borderRadius: "8px",
+            cursor: "pointer",
+          }}
+        >
+          🚀 Start 2-Month Free Trial
+        </button>
+      </div>
+
+      {/* Right Scrollable iframe */}
+      <div
+        style={{
+          flex: "2 1 600px",
+          maxWidth: "500px",
+          width: "100%",
+          height: isMobile ? "70vh" : "120vh",
+          backgroundColor: "white",
+          borderRadius: "12px",
+          overflow: "hidden",
+          boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+        }}
+      >
+        <iframe
+          src="http://resturants.getfana.com/"
+          title="Fana Demo Restaurant"
+          style={{
+            width: "100%",
+            height: "100%",
+            border: "none",
+          }}
+        />
+      </div>
+      </section>
+  
 
       {/* Contact Section */}
       <section id="contact" style={{ backgroundColor: "#211c36", color: "#F5DEB3", padding: "40px 20px", textAlign: "center" }}>

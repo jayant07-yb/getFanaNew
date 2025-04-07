@@ -2172,3 +2172,57 @@ h6 {
     }
   }
   
+
+
+/* --AI MENU--- */
+.aiMenu-demo-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 30px;
+    padding: 40px 20px;
+  }
+  
+  .aiMenu-demo-text {
+    flex: 1;
+    padding: 20px;
+    min-width: 500px;
+    max-width: 50%;
+    text-align: left;
+  }
+  
+  .aiMenu-iframe-wrapper {
+    flex: 1;
+    min-width: 500px;
+    max-width: 50%;
+  }
+  
+  .aiMenu-iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive stacking on smaller screens */
+  @media (max-width: 768px) {
+    .aiMenu-demo-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .aiMenu-demo-text,
+    .aiMenu-iframe-wrapper {
+      width: 100% !important;
+      max-width: 100% !important;
+      min-width: auto !important;
+    }
+  
+    .aiMenu-iframe {
+      height: 400px;
+    }
+  }
+  
