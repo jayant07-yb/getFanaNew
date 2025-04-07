@@ -309,6 +309,99 @@ export default function HomePage() {
       </section>
   
 
+      {/* Fana Smart Pad */}
+
+
+
+      <section style={{ width: "100%" }}>
+  {/* Wrapper */}
+  <div
+    style={{
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "flex-end",
+      position: "relative",
+    }}
+  >
+    {/* Description Box */}
+    <div
+      className="callpad-description"
+      style={{
+        width: "100%",
+        maxWidth: "450px",
+        padding: "20px",
+        paddingRight: "5%",
+        textAlign: "left",
+        backgroundColor: "rgba(255, 255, 255, 0.85)",
+        borderRadius: "12px",
+        position: "absolute",
+        top: "50%",
+        right: "5%",
+        transform: "translateY(-50%)",
+        zIndex: 2,
+      }}
+    >
+      <h2 className="section-title">Fana Call Pad</h2>
+      <p className="section-title" style={{ fontSize: 20, color: "#888888" }}>
+        Calls waiter whenever needed.
+      </p>
+      <div className="col">
+        <h4><strong>Helps in high footfall days</strong></h4>
+        <h4><strong>🤖 Ensures that calling a waiter is not a hassle for customers</strong></h4>
+      </div>
+
+      <button
+        onClick={() => {
+          const formSection = document.getElementById("free-trial-form");
+          if (formSection) formSection.scrollIntoView({ behavior: "smooth" });
+        }}
+        style={{
+          marginTop: 20,
+          padding: "12px 24px",
+          fontSize: 16,
+          fontWeight: "bold",
+          backgroundColor: "#211c36",
+          color: "white",
+          border: "none",
+          borderRadius: "8px",
+          cursor: "pointer",
+        }}
+      >
+        🚀 Start 2-Month Free Trial
+      </button>
+    </div>
+
+    {/* Background Image */}
+    <img
+      src="/images/callbuttonanim.gif"
+      alt="Call Pad Background"
+      style={{
+        width: "100%",
+        height: "auto",
+        display: "block",
+        zIndex: 1,
+      }}
+    />
+  </div>
+
+  {/* Responsive Behavior */}
+  <style>
+    {`
+      @media (max-width: 768px) {
+        .callpad-description {
+          position: static !important;
+          transform: none !important;
+          text-align: left !important;
+          padding: 20px !important;
+          paddingLeft: 20px !important;
+          }
+      }
+    `}
+  </style>
+</section>
+
+
+
       {/* Contact Section */}
       <section id="contact" style={{ backgroundColor: "#211c36", color: "#F5DEB3", padding: "40px 20px", textAlign: "center" }}>
         <h2 className="section-title">Contact Us</h2>
