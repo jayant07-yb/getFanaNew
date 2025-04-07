@@ -109,103 +109,105 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* FanaBot Section */}
+     <section>
 
-     
-      <section 
-        style={{
-          margin: "0 auto",
-          paddingTop: 50,
-          paddingBottom: 50,
-          backgroundImage: "url('/images/banner-image-5.webp')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          color: "black",
-          display: "flex",
-          justifyContent: "flex-end",
-        }}
-      >
-        <div
+        <section 
           style={{
-            width: "100%",
-            maxWidth: "600px",
-            padding: "20px",
-            paddingRight: "5%",
-            textAlign: "left",
-            backgroundColor: "rgba(255, 255, 255, 0.85)",
-            borderRadius: "12px",
+            margin: "0 auto",
+            paddingTop: 50,
+            paddingBottom: 50,
+            backgroundImage: "url('/images/banner-image-5.webp')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            color: "black",
+            display: "flex",
+            justifyContent: "flex-end",
           }}
         >
-          <h2 className="section-title">Robot Waiters on Rent</h2>
-          <p className="section-title" style={{ fontSize: 20, color: "#888888" }}>
-            Hassle-free, Smart & Cost-effective Robots for Restaurants
-          </p>
-          <div className="col" data-wow-delay="0.3s">
-            <h4><strong>🔄 Adaptable Functions:</strong></h4>
-            <h5>Can take orders, serve food, or clean tables based on restaurant needs.</h5>
-            <h4><strong>💰 Flexible Rental Model:</strong></h4>
-            <h5>Available on-demand, reducing labor costs and adjusting to seasonal demand.</h5>
-            <h4><strong>🤖 24/7 Autonomous Service:</strong></h4>
-            <h5>Operates independently with remote assistance for uninterrupted workflow.</h5>
-          </div>
-
-          <button
-            onClick={() => {
-              const formSection = document.getElementById("free-trial-form");
-              if (formSection) formSection.scrollIntoView({ behavior: "smooth" });
-            }}
+          <div
             style={{
-              marginTop: 20,
-              padding: "12px 24px",
-              fontSize: 16,
-              fontWeight: "bold",
-              backgroundColor: "#211c36", // Dark blue
-              color: "white",
-              border: "none",
-              borderRadius: "8px",
-              cursor: "pointer",
+              width: "100%",
+              maxWidth: "600px",
+              padding: "20px",
+              paddingRight: "5%",
+              textAlign: "left",
+              backgroundColor: "rgba(255, 255, 255, 0.85)",
+              borderRadius: "12px",
             }}
           >
-            🚀 Start 2-Month Free Trial
-          </button>
-        </div>
-      </section>
-
-
-
-      {/* How it works Section for FanaBot */}
-      <section className="fanabot-how-it-works-wrapper">
-        <div className="fanabot-how-it-works-container">
-
-          {/* Left Section */}
-          <div className="fanabot-how-it-works-left">
-            <h2> <strong> How Will It Work? </strong></h2>
-            <p>
-              Experience the Future of Dining with Our Robot Waiter
+            <h2 className="section-title">Robot Waiters on Rent</h2>
+            <p className="section-title" style={{ fontSize: 20, color: "#888888" }}>
+              Hassle-free, Smart & Cost-effective Robots for Restaurants
             </p>
-            <p>
-              We will place a robot in your restaurant for 30 days to bring food from the kitchen to tables.
-              A dedicated remote assistant will monitor the robot in real-time and intervene if necessary.
-              If the assistant cannot resolve the issue, the restaurant manager will be notified for full control.
-            </p>
-          </div>
+            <div className="col" data-wow-delay="0.3s">
+              <h4><strong>🔄 Adaptable Functions:</strong></h4>
+              <h5>Can take orders, serve food, or clean tables based on restaurant needs.</h5>
+              <h4><strong>💰 Flexible Rental Model:</strong></h4>
+              <h5>Available on-demand, reducing labor costs and adjusting to seasonal demand.</h5>
+              <h4><strong>🤖 24/7 Autonomous Service:</strong></h4>
+              <h5>Operates independently with remote assistance for uninterrupted workflow.</h5>
+            </div>
 
-          {/* Right Section - Flow */}
-          <div className="fanabot-how-it-works-right">
-            🛠️ Robot operates autonomously<br />
-            ↓<br />
-            🆘 Robot detects an issue & calls dedicated support<br />
-            ↓<br />
-            🎮 Support operator remotely controls the robot<br />
-            ↓<br />
-            👨‍💼 Manager can view/take control anytime<br />
-            ↓<br />
-            📢 If unresolved, manager is alerted
+            <button
+              onClick={() => {
+                const formSection = document.getElementById("free-trial-form");
+                if (formSection) formSection.scrollIntoView({ behavior: "smooth" });
+              }}
+              style={{
+                marginTop: 20,
+                padding: "12px 24px",
+                fontSize: 16,
+                fontWeight: "bold",
+                backgroundColor: "#211c36", // Dark blue
+                color: "white",
+                border: "none",
+                borderRadius: "8px",
+                cursor: "pointer",
+              }}
+            >
+              🚀 Start 2-Month Free Trial
+            </button>
           </div>
+        </section>
 
-        </div>
+
+
+        {/* How it works Section for FanaBot */}
+        <section className="fanabot-how-it-works-wrapper">
+          <div className="fanabot-how-it-works-container">
+
+            {/* Left Section */}
+            <div className="fanabot-how-it-works-left">
+              <h2> <strong> How Will It Work? </strong></h2>
+              <p>
+                Experience the Future of Dining with Our Robot Waiter
+              </p>
+              <p>
+                We will place a robot in your restaurant for 30 days to bring food from the kitchen to tables.
+                A dedicated remote assistant will monitor the robot in real-time and intervene if necessary.
+                If the assistant cannot resolve the issue, the restaurant manager will be notified for full control.
+              </p>
+            </div>
+
+            {/* Right Section - Flow */}
+            <div className="fanabot-how-it-works-right">
+              🛠️ Robot operates autonomously<br />
+              ↓<br />
+              🆘 Robot detects an issue & calls dedicated support<br />
+              ↓<br />
+              🎮 Support operator remotely controls the robot<br />
+              ↓<br />
+              👨‍💼 Manager can view/take control anytime<br />
+              ↓<br />
+              📢 If unresolved, manager is alerted
+            </div>
+
+          </div>
+        </section>
+
       </section>
-
 
 
       {/* Contact Section */}
