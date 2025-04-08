@@ -306,7 +306,7 @@ export default function HomePage() {
         }}
       >
         <iframe
-          src="http://resturants.getfana.com/"
+          src="https://resturants.getfana.com/"
           title="Fana Demo Restaurant"
           style={{
             width: "100%",
