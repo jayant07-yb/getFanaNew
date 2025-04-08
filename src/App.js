@@ -235,14 +235,14 @@ export default function HomePage() {
         flexDirection: isMobile ? "column" : "row",
         justifyContent: "center",
         alignItems: isMobile ? "center" : "flex-start",
-        padding: "50px 5%",
         backgroundImage: "url('/images/banner-image-7.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         color: "black",
-        gap: "40px",
+        gap: "15%",
         paddingTop: "50px",
+        paddingBottom: "50px",
       }}
     >
       {/* Left Info Block */}
